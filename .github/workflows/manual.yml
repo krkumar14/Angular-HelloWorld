@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: ng build    
+        run: npm run build:prod  
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
