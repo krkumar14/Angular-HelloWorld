@@ -36,7 +36,7 @@ jobs:
             path: dist
       - name: package
         run: |
-            ls dist/
+            ls dist/angular-hello-world
       #     mkdir myapp
       #     cp -r dist/* myapp
       #     ls myapp
