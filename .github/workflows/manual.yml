@@ -25,9 +25,9 @@ jobs:
           
 
       - name: build the code
-        run: 
-            npm run build 
-            mkdir myapp
+        run: npm run build
+             
+            
           
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -36,6 +36,7 @@ jobs:
             path: dist
       - name: package
         run: |
+           mkdir myapp
            cp -r dist/* myapp
            zip -r myapp.war .
   
