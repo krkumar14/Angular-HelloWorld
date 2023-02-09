@@ -21,14 +21,23 @@ jobs:
           node-version: 16
       - name: Install dependencies
         run: npm install
+           
+          
 
-      - name: Run tests
-        run: npm run build 
+      - name: build the code
+        run: 
+            npm run build 
+            mkdir myapp
+          
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
             name: dist-files
             path: dist
+      - name: package
+        run: |
+           cp -r dist/* myapp
+           zip -r myapp.war .
   
       -
         name: Set up QEMU
