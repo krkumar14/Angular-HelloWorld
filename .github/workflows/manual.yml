@@ -36,10 +36,11 @@ jobs:
             path: dist
       - name: package
         run: |
-           mkdir myapp
-           cp -r dist/* myapp
-           ls myapp
-           zip -r myapp.war .
+            ls dist/
+      #     mkdir myapp
+      #     cp -r dist/* myapp
+      #     ls myapp
+      #     zip -r myapp.war .
       
       -
         name: Login to Docker Hub
