@@ -20,7 +20,6 @@ jobs:
         ls
         curl http://localhost:80
       
-
     - name: Upload image
       uses: ishworkh/docker-image-artifact-upload@v1
       with:
