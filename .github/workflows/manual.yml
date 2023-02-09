@@ -37,10 +37,10 @@ jobs:
       - name: package
         run: |
             ls dist/angular-hello-world
-      #     mkdir myapp
-      #     cp -r dist/* myapp
-      #     ls myapp
-      #     zip -r myapp.war .
+            mkdir myapp
+            cp -r dist/* myapp
+            ls myapp
+            zip -r myapp.war .
       
       -
         name: Login to Docker Hub
