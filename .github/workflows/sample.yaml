@@ -1,0 +1,28 @@
+name: Docker image cicd
+
+on:
+ 
+  workflow_dispatch:  
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: |
+        docker build . --file Dockerfile --tag my-image-name:v1
+        docker run -d -p 80:80 myimage-name:v1 
+        pwd
+        ls
+        curl http://localhost:80
+      
+
+    - name: Upload image
+      uses: ishworkh/docker-image-artifact-upload@v1
+      with:
+        name: first_image
+        image: "myimage-name:v1"
