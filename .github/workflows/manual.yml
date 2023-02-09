@@ -52,6 +52,11 @@ jobs:
         with:
           username: rajvam6806
           password: Harshu@11
+          
+      - name: verify
+        run: |
+           pwd
+           ls
       -
         name: Build and push
         uses: docker/build-push-action@v4
