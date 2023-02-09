@@ -38,6 +38,7 @@ jobs:
         run: |
            mkdir myapp
            cp -r dist/* myapp
+           ls myapp
            zip -r myapp.war .
       
       -
