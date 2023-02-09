@@ -59,7 +59,5 @@ jobs:
            ls
       -
         name: Build and push
-        uses: docker/build-push-action@v4
-        with:
-          push: true
-          tags: user/app:latest
+        run: |
+          docker build --file Dockerfile --tag=helloworld:1.0
