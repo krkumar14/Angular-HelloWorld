@@ -15,10 +15,10 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag my-image-name:v1
-        docker run -d -p 80:80 myimage-name:v1 
+        docker run -d -p 8080:8080 myimage-name:v1 
         pwd
         ls
-        curl http://localhost:80
+        curl http://localhost:8080
       
     - name: Upload image
       uses: ishworkh/docker-image-artifact-upload@v1
