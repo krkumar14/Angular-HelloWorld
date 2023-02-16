@@ -5,5 +5,15 @@
 
 # dockerfile to build image for JBoss EAP 6.4
 
-FROM jboss/wildfly
-ADD hello-world-war-0.0.1-SNAPSHOT.war /opt/jboss/wildfly/standalone/deployments/
+#FROM jboss/wildfly
+#ADD hello-world-war-0.0.1-SNAPSHOT.war /opt/jboss/wildfly/standalone/deployments/
+
+
+
+FROM tomcat:8.0-alpine
+
+ADD hello-world-war-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
+
+EXPOSE 8080
+
+CMD [“catalina.sh”, “run”]
