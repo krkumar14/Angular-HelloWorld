@@ -6,4 +6,4 @@
 # dockerfile to build image for JBoss EAP 6.4
 
 FROM jboss/wildfly
-ADD node-info.war /opt/jboss/wildfly/standalone/deployments/
+ADD myapp.war /opt/jboss/wildfly/standalone/deployments/
