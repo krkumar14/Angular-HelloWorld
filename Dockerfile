@@ -10,7 +10,7 @@ FROM registry.access.redhat.com/jboss-eap-7/eap71-openshift
 MAINTAINER "FirstName LastName" "emailaddress@gmail.com"
 
 # Copy war to deployments folder
-COPY app.war $JBOSS_HOME/standalone/deployments/
+COPY myapp.war $JBOSS_HOME/standalone/deployments/
 
 # User root to modify war owners
 USER root
