@@ -6,4 +6,4 @@
 # dockerfile to build image for JBoss EAP 6.4
 
 FROM jboss/wildfly
-ADD myapp.war /opt/jboss/wildfly/standalone/deployments/
+ADD hello-world-war-0.0.1-SNAPSHOT.war /opt/jboss/wildfly/standalone/deployments/
