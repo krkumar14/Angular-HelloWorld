@@ -16,7 +16,7 @@ COPY myapp.war $JBOSS_HOME/standalone/deployments/
 USER root
 
 # Modify owners war
-RUN chown jboss:jboss $JBOSS_HOME/standalone/deployments/app.war
+RUN chown jboss:jboss $JBOSS_HOME/standalone/deployments/myapp.war
 
 # Important, use jboss user to run image
 USER jboss
