@@ -11,9 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - shell: bash
+    
     - uses: actions/checkout@v2
     - name: Build the Docker image
+    - shell: bash
       run: |
         docker build . --file Dockerfile --tag=my-image-name:v1
         docker run  -p 8080:8080 -p 9990:9990 my-image-name:v1 
