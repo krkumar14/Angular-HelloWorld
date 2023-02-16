@@ -16,4 +16,4 @@ ADD hello-world-war-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
-CMD [“catalina.sh”, “run”,"java -xvf hello-world-war-0.0.1-SNAPSHOT.war"]
+CMD [“catalina.sh”, “run”]
