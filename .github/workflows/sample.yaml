@@ -15,7 +15,7 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag=my-image-name:v1
-        docker run -d -p 8080:8080 -p 9990:9990 myimage-name:v1 
+        docker run -d -p 8080:8080 -p 9990:9990 my-image-name:v1 
         pwd
         ls
         curl http://localhost:8080
